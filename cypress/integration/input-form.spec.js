@@ -1,7 +1,7 @@
 describe("Input Form", () => {
   beforeEach(() => {
     //will visit the website before every test case runs
-    cy.visit("http://localhost:3030");
+    cy.visit("/");
   });
   it("focuses input on load", () => {
     //cy.visit("http://localhost:3030");
