@@ -1,12 +1,16 @@
 describe("Input Form", () => {
-  it("focuses input on load", () => {
+  beforeEach(() => {
+    //will visit the website before every test case runs
     cy.visit("http://localhost:3030");
+  });
+  it("focuses input on load", () => {
+    //cy.visit("http://localhost:3030");
     cy.focused().should("have.class", "new-todo");
   });
 
   it("accepts input", () => {
     const typedText = "Buy Milk";
-    cy.visit("http://localhost:3030");
+    //cy.visit("http://localhost:3030");
     cy.get(".new-todo")
       .type(typedText)
       //.type("milk")
